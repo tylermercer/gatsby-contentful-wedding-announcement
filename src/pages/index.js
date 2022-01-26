@@ -12,6 +12,7 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Hero
+          image={invite.mainImage.gatsbyImageData}
           title={invite.introText}
           content={invite.addendum.childMarkdownRemark.html}
         />
@@ -41,6 +42,14 @@ export const pageQuery = graphql`
         }
       }
       node_locale
+      mainImage {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          width: 424
+          height: 212
+        )
+      }
     }
   }
 
