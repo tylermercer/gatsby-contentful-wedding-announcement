@@ -12,7 +12,8 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Invitation
-          image={invite.mainImage.gatsbyImageData}
+          imageFg={invite.mainImage.gatsbyImageData}
+          imageBg={invite.mainImageBackground.gatsbyImageData}
           introText={invite.introText}
           nameJoiner={invite.nameJoiner}
           spouse1={invite.spouse1}
@@ -31,13 +32,6 @@ export default RootIndex
 export const pageQuery = graphql`
   query HomeQuery {
     contentfulWeddingInvite {
-      addendum {
-        childMarkdownRemark {
-          html
-        }
-      }
-      date(formatString: "MMMM Do, yyyy")
-      introText
       nameJoiner
       spouse1
       spouse2
@@ -46,8 +40,21 @@ export const pageQuery = graphql`
           html
         }
       }
+      addendum {
+        childMarkdownRemark {
+          html
+        }
+      }
       node_locale
       mainImage {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          width: 424
+          height: 212
+        )
+      }
+      mainImageBackground {
         gatsbyImageData(
           layout: FULL_WIDTH
           placeholder: BLURRED
