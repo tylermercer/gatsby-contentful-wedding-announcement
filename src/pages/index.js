@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
-import Hero from '../components/hero'
+import Invitation from '../components/invitation/invitation'
 
 class RootIndex extends React.Component {
   render() {
@@ -11,10 +11,15 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Hero
+        <Invitation
           image={invite.mainImage.gatsbyImageData}
-          title={invite.introText}
-          content={invite.addendum.childMarkdownRemark.html}
+          introText={invite.introText}
+          nameJoiner={invite.nameJoiner}
+          spouse1={invite.spouse1}
+          spouse2={invite.spouse2}
+          date={invite.date}
+          predicateHtml={invite.predicate.childMarkdownRemark.html}
+          addendumHtml={invite.addendum.childMarkdownRemark.html}
         />
       </Layout>
     )
