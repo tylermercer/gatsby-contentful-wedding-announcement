@@ -48,7 +48,7 @@ h6 {
 }
 
 a {
-  color: currentColor;
+  color: var(--primary);
   text-decoration: none;
 }
 

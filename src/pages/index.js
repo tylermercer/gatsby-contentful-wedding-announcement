@@ -21,6 +21,7 @@ class RootIndex extends React.Component {
           date={invite.date}
           predicateHtml={invite.predicate.childMarkdownRemark.html}
           addendumHtml={invite.addendum.childMarkdownRemark.html}
+          registryInfoHtml={invite.registryInformation.childMarkdownRemark.html}
         />
       </Layout>
     )
@@ -61,6 +62,11 @@ export const pageQuery = graphql`
           width: 424
           height: 260
         )
+      }
+      registryInformation {
+        childMarkdownRemark {
+          html
+        }
       }
     }
   }

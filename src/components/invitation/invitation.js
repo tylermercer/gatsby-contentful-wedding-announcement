@@ -4,7 +4,16 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import "@fontsource/parisienne"
 import * as styles from './invitation.module.css'
 
-const Invitation = ({ introText, imageBg, imageFg, nameJoiner, spouse1, spouse2, predicateHtml, addendumHtml }) => (
+const Invitation = ({ introText,
+  imageBg,
+  imageFg,
+  nameJoiner,
+  spouse1,
+  spouse2,
+  predicateHtml,
+  addendumHtml,
+  registryInfoHtml
+}) => (
   <div className={styles.invitation}>
     {introText &&
       <div className={styles.details}>
@@ -28,6 +37,10 @@ const Invitation = ({ introText, imageBg, imageFg, nameJoiner, spouse1, spouse2,
     }
     {addendumHtml &&
       <div className={styles.details} dangerouslySetInnerHTML={{ __html: addendumHtml }}>
+      </div>
+    }
+    {registryInfoHtml &&
+      <div className={styles.details} dangerouslySetInnerHTML={{ __html: registryInfoHtml }}>
       </div>
     }
   </div>
