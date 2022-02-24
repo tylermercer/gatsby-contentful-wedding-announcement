@@ -1,6 +1,7 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
+import "@fontsource/parisienne"
 import * as styles from './invitation.module.css'
 
 const Invitation = ({ imageBg, imageFg, nameJoiner, spouse1, spouse2, predicateHtml, addendumHtml }) => (

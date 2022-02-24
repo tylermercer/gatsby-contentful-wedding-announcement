@@ -1,12 +1,16 @@
 .title, strong {
-  font-size: larger;
+  font-family: var(--font-cursive);
+  letter-spacing: normal;
   font-weight: bold;
-  font-style: italic;
   color: #0b275bff;
-  display: block;
 }
 .title {
-  font-size: xx-large;
+  font-size: 5rem;
+  line-height: 1rem;
+  margin-top: 36px;
+  margin-bottom: 24px;
+  z-index: 1;
+  transform: rotate(-2deg);
 }
 .image-container {
   position: relative;
@@ -35,17 +39,20 @@ b {
   align-items: center;
   text-align: center;
 }
-.details :not(:nth-of-type(1)) {
-  padding-top: 0;
-}
 .details p {
-  margin: 10px 16px;
+  margin: 2px 18px;
+  font-size: larger;
+}
+.details {
+  padding: 12px;
 }
 .details strong {
   display: block;
+  font-size: 2.4rem;
+  line-height: 2.5rem;
 }
 .invitation {
   box-shadow: 0px 10px 40px rgb(0, 0, 0, 0.2);
   max-width: 600px;
-  margin: 20px auto;
+  margin: 24px auto;
 }

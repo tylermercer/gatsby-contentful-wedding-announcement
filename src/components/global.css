@@ -1,19 +1,19 @@
 @font-face {
-  font-family: 'Inter var';
+  font-family: 'HK Grotesk';
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url('/fonts/Inter-roman.var.woff2?v=3.19') format('woff2');
+  src: url('../fonts/hkgrotesk-regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Inter var';
+  font-family: 'HK Grotesk';
   font-weight: 100 900;
   font-display: swap;
-  font-style: italic;
-  font-named-instance: 'Italic';
-  src: url('/fonts/Inter-italic.var.woff2?v=3.19') format('woff2');
+  font-style: normal;
+  font-named-instance: 'Light';
+  src: url('../fonts/hkgrotesk-light.woff2') format('woff2');
 }
 
 html {
@@ -25,6 +25,7 @@ html * {
 }
 
 body {
+  letter-spacing: .3rem;
   background: var(--background);
   color: var(--text-color);
   font-family: var(--font-sans);
