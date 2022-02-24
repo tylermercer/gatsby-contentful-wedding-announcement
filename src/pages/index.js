@@ -51,7 +51,7 @@ export const pageQuery = graphql`
           layout: FULL_WIDTH
           placeholder: BLURRED
           width: 424
-          height: 212
+          height: 260
         )
       }
       mainImageBackground {
@@ -59,7 +59,7 @@ export const pageQuery = graphql`
           layout: FULL_WIDTH
           placeholder: BLURRED
           width: 424
-          height: 212
+          height: 260
         )
       }
     }
