@@ -14,7 +14,7 @@ const Invitation = ({ imageBg, imageFg, nameJoiner, spouse1, spouse2, predicateH
         <GatsbyImage className={styles.imageBg} alt={`${spouse1} ${nameJoiner} ${spouse2}`} image={imageBg} />
       )}
       {imageFg && (
-        <GatsbyImage className={styles.imageFg} alt={`${spouse1} ${nameJoiner} ${spouse2}`} image={imageFg} />
+        <GatsbyImage className={styles.imageFg} style={{ position: 'absolute' }} alt={`${spouse1} ${nameJoiner} ${spouse2}`} image={imageFg} />
       )}
     </div>
     <div className={styles.details} dangerouslySetInnerHTML={{ __html: predicateHtml }}>
