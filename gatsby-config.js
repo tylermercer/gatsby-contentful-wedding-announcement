@@ -41,7 +41,20 @@ module.exports = {
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
-    "gatsby-transformer-remark",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+        {
+          resolve: "gatsby-remark-external-links",
+          options: {
+            target: "_blank",
+            rel: "noopener nofollow noreferrer external"
+          }
+        }
+        ]
+      }
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
