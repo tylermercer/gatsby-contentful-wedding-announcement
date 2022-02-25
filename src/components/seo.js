@@ -23,7 +23,7 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
 
   const defaultImage = thumbnail.resize.src
 
-  const defaultTitle = `${spouse1} and ${spouse2}'s Wedding`
+  const defaultTitle = `${spouse1} and ${spouse2}'s Wedding Announcement`
 
   const metaDescription = description || `${spouse1} and ${spouse2} are getting married!`
 

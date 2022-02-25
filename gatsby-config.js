@@ -36,7 +36,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Wedding Invitation",
+    title: "Wedding Announcement",
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
