@@ -3,21 +3,29 @@ import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
-  const { site } = useStaticQuery(
+  const { contentfulWeddingInvite } = useStaticQuery(
     graphql`
       query {
-        site {
-          siteMetadata {
-            title
-            description
+        contentfulWeddingInvite {
+          spouse1
+          spouse2
+          thumbnail {
+            resize(height: 100, width: 100, cropFocus: FACES) {
+              src
+            }
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const { spouse1, spouse2, thumbnail } = contentfulWeddingInvite
+
+  const defaultImage = thumbnail.resize.src
+
+  const defaultTitle = `${spouse1} and ${spouse2}'s Wedding`
+
+  const metaDescription = description || `${spouse1} and ${spouse2} are getting married!`
 
   return (
     <Helmet
@@ -34,11 +42,11 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
         },
         {
           name: `image`,
-          content: image,
+          content: image || defaultImage,
         },
         {
           property: `og:title`,
-          content: title,
+          content: title || defaultTitle,
         },
         {
           property: `og:description`,
@@ -50,19 +58,19 @@ const Seo = ({ description = '', lang = 'en', meta = [], title, image }) => {
         },
         {
           property: `og:image`,
-          content: image,
+          content: image || defaultImage,
         },
         {
           name: `twitter:card`,
           content: `summary_large_image`,
         },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.social?.twitter || ``,
-        },
+        // {
+        //   name: `twitter:creator`,
+        //   content: site.siteMetadata?.social?.twitter || ``,
+        // },
         {
           name: `twitter:title`,
-          content: title,
+          content: title || defaultTitle,
         },
         {
           name: `twitter:description`,
