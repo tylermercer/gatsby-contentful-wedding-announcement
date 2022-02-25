@@ -25,10 +25,17 @@ const Invitation = ({ introText,
     </div>
     <div className={styles.imageContainer}>
       {imageBg && (
-        <GatsbyImage className={styles.imageBg} alt={`${spouse1} ${nameJoiner} ${spouse2}`} image={imageBg} />
+        <GatsbyImage className={styles.imageBg}
+                     alt={`${spouse1} ${nameJoiner} ${spouse2}`}
+                     draggable={false}
+                     image={imageBg} />
       )}
       {imageFg && (
-        <GatsbyImage className={styles.imageFg} style={{ position: 'absolute' }} alt={`${spouse1} ${nameJoiner} ${spouse2}`} image={imageFg} />
+        <GatsbyImage className={styles.imageFg}
+                     style={{ position: 'absolute' }}
+                     alt={`${spouse1} ${nameJoiner} ${spouse2}`}
+                     draggable={false}
+                     image={imageFg} />
       )}
     </div>
     {predicateHtml &&
