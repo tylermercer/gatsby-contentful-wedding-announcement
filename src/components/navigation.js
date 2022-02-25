@@ -1,12 +1,41 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 
 import * as styles from './navigation.module.css'
 
-const Navigation = () => (
-  <nav role="navigation" className={styles.container} aria-label="Main">
+const Navigation = () => {
+  const { contentfulWeddingInvite } = useStaticQuery(
+    graphql`
+      query {
+        contentfulWeddingInvite {
+          nameJoiner
+          spouse1
+          spouse2
+          predicate {
+            childMarkdownRemark {
+              excerpt
+            }
+          }
+          thumbnail {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              width: 424
+              height: 260
+            )
+          }
+        }
+      }
+    `
+  )
+
+  const { nameJoiner, spouse1, spouse2 } = contentfulWeddingInvite
+
+  const title = `${spouse1} ${nameJoiner} ${spouse2}`
+
+  return <nav role="navigation" className={styles.container} aria-label="Main">
     <Link to="/" className={styles.logoLink}>
-      <span className={styles.navigationItem}>Populate me via Contentful!</span>
+      <span className={styles.navigationItem}>{title}</span>
     </Link>
     <ul className={styles.navigation}>
       <li className={styles.navigationItem}>
@@ -16,6 +45,6 @@ const Navigation = () => (
       </li>
     </ul>
   </nav>
-)
+}
 
 export default Navigation
