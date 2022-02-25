@@ -37,6 +37,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+main {
+  padding: 0px 10px;
+}
+
 h1,
 h2,
 h3,

@@ -6,12 +6,38 @@
 }
 .title {
   font-size: 5rem;
-  line-height: 1rem;
+  line-height: 0rem;
   margin-top: 36px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   z-index: 1;
   transform: rotate(-2deg);
 }
+@media (max-width: 520px) {
+  .title {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 430px) {
+  .title {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 380px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 340px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
 .image-container {
   position: relative;
   width: 100%;
