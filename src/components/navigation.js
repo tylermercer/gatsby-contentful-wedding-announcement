@@ -11,19 +11,6 @@ const Navigation = () => {
           nameJoiner
           spouse1
           spouse2
-          predicate {
-            childMarkdownRemark {
-              excerpt
-            }
-          }
-          thumbnail {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-              width: 424
-              height: 260
-            )
-          }
         }
       }
     `
