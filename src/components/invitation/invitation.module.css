@@ -99,4 +99,5 @@ b {
   max-width: 600px;
   margin: 24px auto;
   overflow: hidden;
+  background: var(--white);
 }
