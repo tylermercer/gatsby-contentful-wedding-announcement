@@ -1,6 +1,6 @@
 .title, strong {
   font-family: var(--font-cursive);
-  letter-spacing: normal;
+  letter-spacing: 0;
   font-weight: bold;
   color: #0b275bff;
 }
