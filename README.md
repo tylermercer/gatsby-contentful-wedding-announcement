@@ -1,8 +1,6 @@
-# Contentful Gatsby Starter Blog
+# Contentful Gatsby Wedding Announcement
 
-Create a [Gatsby](http://gatsbyjs.com/) blog powered by [Contentful](https://www.contentful.com).
-
-![An article page of the starter blog](./screenshot.png "An article page of the starter blog")
+Create a [Gatsby](http://gatsbyjs.com/) wedding announcement website powered by [Contentful](https://www.contentful.com).
 
 Static sites are scalable, secure and have very little required maintenance. They come with a drawback though. Not everybody feels good editing files, building a project and uploading it somewhere. This is where Contentful comes into play.
 
@@ -21,14 +19,14 @@ See our [official Contentful getting started guide](https://www.contentful.com/d
 ### Get the source code and install dependencies.
 
 ```
-$ git clone https://github.com/contentful/starter-gatsby-blog.git
+$ git clone https://github.com/tylermercer/gatsby-contentful-wedding-announcement.git
 $ npm install
 ```
 
 Or use the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli).
 
 ```
-$ gatsby new contentful-starter-blog https://github.com/contentful/starter-gatsby-blog/
+$ gatsby new contentful-starter-blog https://github.com/tylermercer/gatsby-contentful-wedding-announcement/
 ```
 
 ### Set up of the needed content model and create a configuration file
